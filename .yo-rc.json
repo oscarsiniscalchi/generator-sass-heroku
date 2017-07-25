@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Mojo",
+      "authorEmail": "santiago.mollajoli@neonroots.com",
+      "authorUrl": ""
+    }
+  }
+}
