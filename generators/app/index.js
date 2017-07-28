@@ -3,6 +3,8 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
+var templateName = '';
+
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -34,14 +36,22 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    var template_name = '';
-    template_name = template_name + this.props.frontend_framework.toLowerCase();
-    template_name = template_name + '_' + this.props.javascript_language.toLowerCase();
+    templateName += this.props.frontend_framework.toLowerCase();
+    templateName += '_' + this.props.javascript_language.toLowerCase();
 
-    console.log(template_name);
+    this.fs.copyTpl(
+      this.templatePath(this.props.frontend_framework),
+      this.destinationPath(templateName)
+    );
   }
 
+  // Change working directory to 'gulp' for dependency install
+    process.chdir('/' + templateName);
+
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      bower: false,
+      npm: true
+    });
   }
 };
