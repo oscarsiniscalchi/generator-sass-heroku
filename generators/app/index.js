@@ -23,7 +23,7 @@ module.exports = class extends Generator {
       {
         type: 'list',
         name: 'javascript_language',
-        choices: ['CoffeeScript', 'Javascript'],
+        choices: ['Javascript'],
         message: 'Which JS flavor?',
         default: 'Javascript'
       }
