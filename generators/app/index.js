@@ -36,6 +36,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    templateName = '';
     templateName += this.props.frontend_framework.toLowerCase();
     templateName += '_' + this.props.javascript_language.toLowerCase();
 
