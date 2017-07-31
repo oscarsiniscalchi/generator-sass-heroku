@@ -45,10 +45,10 @@ module.exports = class extends Generator {
     );
   }
 
-  // Change working directory to 'gulp' for dependency install
-    process.chdir('/' + templateName);
-
   install() {
+    // Change working directory to 'gulp' for dependency install
+    var npmdir = process.cwd() + '/' + templateName;
+    process.chdir(npmdir);
     this.installDependencies({
       bower: false,
       npm: true
