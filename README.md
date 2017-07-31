@@ -1,5 +1,17 @@
-# generator-sass-heroku [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-sass-heroku
 > Basic landing page generator
+
+####This Project uses:
+* Foundation or Bootstrap
+* Sass
+* Javascript
+* jQuery
+* Compass
+* Modernizr
+* Jshint
+* Sass-lint
+* Express Server
+
 
 ## Installation
 
@@ -16,21 +28,10 @@ Then generate your new project:
 yo sass-heroku
 ```
 
-## Getting To Know Yeoman
+## Compile Project
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ * Move to the new project folder generated with Yeoman
+ * Run `gulp` to start initial compile and check for changes on files
+ * Move to another Terminal tab and run `node server.js`
 
-## License
-
-Apache-2.0 © [Mojo]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-sass-heroku.svg
-[npm-url]: https://npmjs.org/package/generator-sass-heroku
-[travis-image]: https://travis-ci.org/mojouy/generator-sass-heroku.svg?branch=master
-[travis-url]: https://travis-ci.org/mojouy/generator-sass-heroku
-[daviddm-image]: https://david-dm.org/mojouy/generator-sass-heroku.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/mojouy/generator-sass-heroku
+**Thats's it!**

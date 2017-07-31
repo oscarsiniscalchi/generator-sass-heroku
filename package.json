@@ -19,6 +19,8 @@
     "compass",
     "modernizr",
     "express",
+    "jshint",
+    "sass-lint",
     "scss",
     "html5",
     "yeoman-generator"
