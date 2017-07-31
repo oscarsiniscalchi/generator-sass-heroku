@@ -1,7 +1,7 @@
 # generator-sass-heroku
 > Basic landing page generator
 
-####This Project uses:
+#### This Project uses:
 * Foundation or Bootstrap
 * Sass
 * Javascript
