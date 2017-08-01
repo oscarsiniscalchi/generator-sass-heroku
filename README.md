@@ -33,5 +33,6 @@ yo sass-heroku
  * Move to the new project folder generated with Yeoman
  * Run `gulp` to start initial compile and check for changes on files
  * Move to another Terminal tab and run `node server.js`
+ * Server runs in localhost:8080
 
 **Thats's it!**
