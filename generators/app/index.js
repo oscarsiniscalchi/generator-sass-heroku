@@ -6,6 +6,10 @@ const yosay = require('yosay');
 var templateName = '';
 
 module.exports = class extends Generator {
+  constructor(args, opts) {
+    super(args, opts);
+    this.argument('app_name', { type: String, required: false, desc: 'A name for your app', default: '' })
+  }
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
@@ -29,6 +33,15 @@ module.exports = class extends Generator {
       }
     ];
 
+    if(this.options.app_name == '') {
+      prompts.unshift({
+        type: 'input',
+        name: 'app_name',
+        message: 'What\s the name of your app. (Leave Empty for Randomness):',
+        default: ''
+      });
+    }
+
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
@@ -36,9 +49,11 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    templateName = '';
-    templateName += this.props.frontend_framework.toLowerCase();
-    templateName += '_' + this.props.javascript_language.toLowerCase();
+    templateName = this.props.app_name;
+    if (templateName == '') {
+      templateName += this.props.frontend_framework.toLowerCase();
+      templateName += '_' + this.props.javascript_language.toLowerCase();
+    }
 
     this.fs.copyTpl(
       this.templatePath(this.props.frontend_framework),

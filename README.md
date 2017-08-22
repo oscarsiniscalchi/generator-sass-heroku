@@ -25,7 +25,7 @@ npm install -g generator-sass-heroku
 Then generate your new project:
 
 ```bash
-yo sass-heroku
+yo sass-heroku your-project-name
 ```
 
 ## Compile Project
